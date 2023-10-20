@@ -58,7 +58,9 @@
                 {% for produto in produtos %}
                     <tr>
                         <th scope="row">{{ produto.cod }}</th>
-                        <td>{{ produto.name }}</td>
+                        <td>
+                          <a href = "{% url 'product-details' produto.id %}">{{ produto.name }}</a>
+                        </td>
                         <td>{{ produto.price }}</td>
                     </tr>
                 {% endfor %}
